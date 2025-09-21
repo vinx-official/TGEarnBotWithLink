@@ -46,9 +46,9 @@ Users receive GP Links shortlinks, complete them, and earn ₹1 per link. After 
 
 ---
 
-## Database Schema
+## Install / Setup
 
-**Users Collection**
+**Users Setup**
 ```json
 
 Before Running:
