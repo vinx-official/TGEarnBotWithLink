@@ -50,9 +50,21 @@ Users receive GP Links shortlinks, complete them, and earn ₹1 per link. After 
 
 **Users Collection**
 ```json
-{
-  "tg_id": "123456789",
-  "balance": 0,
-  "completed_links": 0,
-  "upi_id": ""
-}
+
+Before Running:
+Install Libraries:
+code
+
+
+Bash
+"pip install python-telegram-bot~=20.0 pymongo python-dotenv aiohttp bso"
+
+Set up .env file: Create a .env file in your project's root directory and fill in your API keys and admin IDs as shown in the config.py section.
+MongoDB: Ensure your MongoDB instance is running and accessible (or use a MongoDB Atlas connection string). The MONGO_URI in your .env file should point to it. The database name used in the code is earning_bot.
+GP Links API Key: Make sure your GPLINKS_API_KEY is correct. The gplinks_api.py assumes a specific API structure (https://gplinks.in/api?api=<KEY>&url=<URL>). Double-check the official GP Links API documentation to ensure this URL and response parsing are accurate.
+Admin IDs: Replace the placeholder ADMIN_IDS in the .env file with your actual Telegram user ID(s) to access the /admin command.
+How to Run:
+code
+
+Bash
+"python main.py"
